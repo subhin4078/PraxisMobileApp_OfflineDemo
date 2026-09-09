@@ -1,0 +1,511 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Also update theme.ts & tailwind.config.js */
+@layer base {
+  :root {
+    /* Background colors */
+    --background: #f9f7f7;
+    --surface: #ffffff;
+    --cardBackground: #ffffff;
+    --secondaryBackground: #f5f1ed;
+
+    /* Text colors */
+    --primaryText: #112d4e;
+    --secondaryText: #ff9213;
+    --mutedText: #9ba1a6;
+    --whiteText: #ffffff;
+    --blackText: #000000;
+
+    /* Primary colors */
+    --primary: #ff9c22;
+    --primaryDark: #ff6b00;
+    --primaryIcon: #ff9c22;
+    --accent: #ffb43d;
+    --primary100: #ffbe6f;
+    --primary300: #ffb355;
+    --primary500: #ffa73c;
+    --primary900: #ff9108;
+    --primary1100: #ee8300;
+    --primary1300: #d57500;
+
+    /* Tab bar colors */
+    --tabBackground: #ffffff;
+    --tabActiveIcon: #ff9c22;
+    --tabInactiveIcon: #9ca3af;
+    --tabActiveText: #ff9c22;
+    --tabInactiveText: #9ca3af;
+
+    /* Gradient colors */
+    --gradientPrimary: #ff9c22;
+    --gradientSecondary: #ff8705;
+
+    /* Feature card colors */
+    --featureRedBg: #f9f7f7;
+    --featureRedIcon: #ff8705;
+    --featureBlueBg: #ffb43d;
+    --featureBlueIcon: #ff9213;
+    --featureGreenBg: #f9f7f7;
+    --featureGreenIcon: #ff8705;
+    --featureYellowBg: #ffb43d;
+    --featureYellowIcon: #ff9213;
+    --featurePurpleBg: #f9f7f7;
+    --featurePurpleIcon: #ff8705;
+    --featureIndigoBg: #ffb43d;
+    --featureIndigoIcon: #ff9213;
+
+    /* Shadow colors */
+    --shadowColor: rgba(255, 156, 34, 0.08);
+    --cardShadow: rgba(255, 156, 34, 0.08);
+    --tabShadow: rgba(255, 156, 34, 0.06);
+
+    /* Special colors */
+    --notificationBadge: #ef4444;
+    --progressTrack: #f0f0f0;
+    --progressFill: #ff9c22;
+
+    /* Learning card colors */
+    --learningCardBackground: #ffb43d;
+    --learningCardTitle: #112d4e;
+    --learningCardSubtitle: #ff9213;
+    --learningCardProgressText: #000000;
+    --learningCardHint: #112d4e;
+
+    /* Ability card colors */
+    --abilityCardBackground: #ff8705;
+    --abilityCardTitle: #ffffff;
+    --abilityCardSubtitle: #ffb43d;
+    --abilityCardStats: #ff9213;
+    --abilityCardButton: #ff9c22;
+
+    /* Chat screen colors */
+    --chatItemBackground: #ffffff;
+    --chatIconBackground: #ffb43d;
+    --chatIcon: #fffaf1ff;
+    --chatTitle: #112d4e;
+    --chatTimestamp: #ff9213;
+    --chatMessage: #112d4e;
+    --chatMessageCount: #ff9213;
+    --chatChevron: #ff9c22;
+    --chatEmptyIcon: #ffb43d;
+    --chatEmptyTitle: #112d4e;
+    --chatEmptySubtitle: #ff9213;
+    --chatAddButton: #ff9c22;
+
+    /* Border colors */
+    --borderColor: rgba(255, 156, 34, 0.12);
+    --cardBorder: rgba(255, 156, 34, 0.12);
+    --headerBorder: #f9bc68;
+    --separator: #ded7ca;
+
+    /* Status colors */
+    --success: #22c55e;
+    --warning: #f97316;
+    --error: #ef4444;
+    --info: #3b82f6;
+
+    /* Statistics colors */
+    --statsAverageScore: #22c55e;
+    --statsAverageSpeed: #3b82f6;
+    --statsDifficultyScore: #ad1d82;
+    --statsTopicsCovered: #ecca05;
+
+    /* Difficulty colors */
+    --difficultyEasy: #22c55e;
+    --difficultyHard: #f97316;
+    --difficultyDSE: #ef4444;
+
+    /* Toast colors */
+    --toastSuccess: #10b981;
+    --toastError: #ef4444;
+    --toastWarning: #f59e0b;
+    --toastInfo: #ff9c22;
+    --toastShadow: #000;
+
+    /* Error input background */
+    --errorInputBackground: #fef2f2;
+
+    /* Input colors */
+    --inputPlaceholder: #9ca3af;
+    --iconInactive: #9ca3af;
+    --inputBorder: #e5e7eb;
+    --inputBackground: #f9fafb;
+    --inputBackgroundFocused: #ffffff;
+
+    /* Practice screen colors */
+    --practiceEmptyTitle: #223344;
+    --practiceEmptySubtitle: #ff9213;
+    --practiceAreaCardBg: #ff9108;
+    --practiceAreaCardText: #ffffff;
+    --practiceAreaCardActiveBg: #ffa73c;
+    --practiceAreaCardActiveText: #ffffff;
+    --practiceAreaBadgeBg: #3b82f6;
+    --practiceAreaBadgeText: #ffffff;
+    --practiceTopicSelectedBg: #e75496;
+    --practiceTopicSelectedBorder: #e75496;
+    --practiceTopicSelectedText: #ffffff;
+    --practiceTopicDefaultBg: #ebf2ff;
+    --practiceTopicDefaultBorder: rgba(255, 156, 34, 0.12);
+    --practiceTopicDefaultText: #223344;
+    --practiceDifficultyDefaultBg: #f4f7f9;
+    --practiceDifficultyDefaultText: #223344;
+    --practiceCountSelectedBg: #3b82f6;
+    --practiceCountSelectedText: #ffffff;
+    --practiceCountDefaultBg: #ffffff;
+    --practiceCountDefaultText: #223344;
+    --practiceStartButtonBg: #ff6522;
+    --practiceStartButtonText: #ffffff;
+    --practiceStartDisabledBg: #9ba1a6;
+    --practiceFabBg: #ff9c22;
+    --practiceFabIcon: #ffffff;
+    --practiceSessionCardBg: #ffffff;
+    --practiceSessionTitle: #223344;
+    --practiceSessionSubtitle: #9ba1a6;
+    --practiceScoreHigh: #28c76f;
+    --practiceScoreMid: #f97316;
+    --practiceScoreLow: #ef4444;
+    --practiceScoreText: #ffffff;
+    --practiceInProgressBg: #ff9c22;
+    --practiceTimerIcon: #ff9c22;
+    --practiceTimerText: #223344;
+    --practiceNavCurrent: #ff9c22;
+    --practiceNavAnswered: #ffb43d;
+    --practiceNavDefault: #ffffff;
+    --practiceNavDefaultBorder: rgba(255, 156, 34, 0.12);
+    --practiceNavCurrentText: #ffffff;
+    --practiceNavAnsweredText: #ffffff;
+    --practiceNavDefaultText: #223344;
+    --practiceOptionSelectedBg: #ff9c22;
+    --practiceOptionSelectedText: #ffffff;
+    --practiceOptionDefaultBg: #ffffff;
+    --practiceOptionDefaultText: #223344;
+    --practiceOptionDefaultBorder: rgba(255, 156, 34, 0.12);
+    --practiceOptionLabelBg: #f5f1ed;
+    --practiceOptionLabelSelectedBg: #ff6b00;
+    --practiceSubmitBg: #ff9c22;
+    --practiceSubmitText: #ffffff;
+    --practiceHintBg: #fff3e0;
+    --practiceHintText: #ff9c22;
+    --practiceHintCardBg: #fff8f0;
+    --practiceReviewCorrectBg: #28c76f;
+    --practiceReviewWrongBg: #ef4444;
+    --practiceReviewIconColor: #ffffff;
+    --practiceReviewCorrectOptionBg: #28c76f;
+    --practiceReviewWrongOptionBg: #ef4444;
+    --practiceReviewNeutralOptionBg: #f5f1ed;
+    --practiceReviewOptionText: #ffffff;
+    --practiceReviewNeutralText: #223344;
+    --practiceBackButtonBg: #ffb257;
+    --practiceBackButtonText: #ffffff;
+
+    /* Success colors */
+    --successGreen: #10b981;
+    --successGreenLight: #34d399;
+
+    /* Shop item colors */
+    --shopItemPurple: #7c4dff;
+    --shopItemOrange: #ff6f00;
+
+    /* Rank leaderboard medal colors */
+    --rankMedalGold: #ffd700;
+    --rankMedalSilver: #c0c0c0;
+    --rankMedalBronze: #cd7f32;
+
+    /* Home header buff button colors */
+    --buffXpBg: #ecfdf5;
+    --buffXpBgPressed: #ddfce7;
+    --buffXpBorder: #34d399;
+    --buffCoinBg: #fffbeb;
+    --buffCoinBgPressed: #fff3cd;
+    --buffCoinBorder: #ffb300;
+    --buffTooltipMutedText: #d1d5db;
+
+    /* SVG / ring colors */
+    --svgRingTrack: #e0e0e0;
+    --coinSvgDark: #ffb300;
+    --coinSvgLight: #ffd54f;
+
+    /* Battle lobby colors */
+    --battleGold: #ffb800;
+    --battleGoldDark: #e5a200;
+    --battleOrange: #ff6f00;
+    --battleDraw: #f59e0b;
+    --battleConfirmGreen: #10b981;
+    --battleConfirmGreenDark: #059669;
+    --battleEventOrangeDark: #ea580c;
+    --battleEventGradientStart: #fff7ed;
+    --battleEventGradientEnd: #fffbeb;
+
+    /* Battle result quiz review colors */
+    --battleResultCorrectBg: #28c76f;
+    --battleResultWrongBg: #ef4444;
+    --battleResultIconColor: #ffffff;
+    --battleResultCorrectOptionBg: #28c76f;
+    --battleResultWrongOptionBg: #ef4444;
+    --battleResultOptionText: #ffffff;
+
+    /* Math background symbol default */
+    --mathBgSymbol: #eef0ff;
+  }
+
+  .dark {
+    /* TODO: Same as the light theme for now */
+
+    /* Background colors */
+    --background: #f9f7f7;
+    --surface: #ffffff;
+    --cardBackground: #ffffff;
+    --secondaryBackground: #f5f1ed;
+
+    /* Text colors */
+    --primaryText: #112d4e;
+    --secondaryText: #ff9213;
+    --mutedText: #9ba1a6;
+    --whiteText: #ffffff;
+    --blackText: #000000;
+
+    /* Primary colors */
+    --primary: #ff9c22;
+    --primaryDark: #ff6b00;
+    --primaryIcon: #ff9c22;
+    --accent: #ffb43d;
+    --primary100: #ffbe6f;
+    --primary300: #ffb355;
+    --primary500: #ffa73c;
+    --primary900: #ff9108;
+    --primary1100: #ee8300;
+    --primary1300: #d57500;
+
+    /* Tab bar colors */
+    --tabBackground: #ffffff;
+    --tabActiveIcon: #ff9c22;
+    --tabInactiveIcon: #9ca3af;
+    --tabActiveText: #ff9c22;
+    --tabInactiveText: #9ca3af;
+
+    /* Gradient colors */
+    --gradientPrimary: #ff9c22;
+    --gradientSecondary: #ff8705;
+
+    /* Feature card colors */
+    --featureRedBg: #f9f7f7;
+    --featureRedIcon: #ff8705;
+    --featureBlueBg: #ffb43d;
+    --featureBlueIcon: #ff9213;
+    --featureGreenBg: #f9f7f7;
+    --featureGreenIcon: #ff8705;
+    --featureYellowBg: #ffb43d;
+    --featureYellowIcon: #ff9213;
+    --featurePurpleBg: #f9f7f7;
+    --featurePurpleIcon: #ff8705;
+    --featureIndigoBg: #ffb43d;
+    --featureIndigoIcon: #ff9213;
+
+    /* Shadow colors */
+    --shadowColor: rgba(255, 156, 34, 0.08);
+    --cardShadow: rgba(255, 156, 34, 0.08);
+    --tabShadow: rgba(255, 156, 34, 0.06);
+
+    /* Special colors */
+    --notificationBadge: #ef4444;
+    --progressTrack: #f0f0f0;
+    --progressFill: #ff9c22;
+
+    /* Learning card colors */
+    --learningCardBackground: #ffb43d;
+    --learningCardTitle: #112d4e;
+    --learningCardSubtitle: #ff9213;
+    --learningCardProgressText: #000000;
+    --learningCardHint: #112d4e;
+
+    /* Ability card colors */
+    --abilityCardBackground: #ff8705;
+    --abilityCardTitle: #ffffff;
+    --abilityCardSubtitle: #ffb43d;
+    --abilityCardStats: #ff9213;
+    --abilityCardButton: #ff9c22;
+
+    /* Chat screen colors */
+    --chatItemBackground: #ffffff;
+    --chatIconBackground: #ffb43d;
+    --chatIcon: #fffaf1ff;
+    --chatTitle: #112d4e;
+    --chatTimestamp: #ff9213;
+    --chatMessage: #112d4e;
+    --chatMessageCount: #ff9213;
+    --chatChevron: #ff9c22;
+    --chatEmptyIcon: #ffb43d;
+    --chatEmptyTitle: #112d4e;
+    --chatEmptySubtitle: #ff9213;
+    --chatAddButton: #ff9c22;
+
+    /* Border colors */
+    --borderColor: rgba(255, 156, 34, 0.12);
+    --cardBorder: rgba(255, 156, 34, 0.12);
+    --headerBorder: #f9bc68;
+    --separator: #ded7ca;
+
+    /* Status colors */
+    --success: #22c55e;
+    --warning: #f97316;
+    --error: #ef4444;
+    --info: #3b82f6;
+
+    /* Statistics colors */
+    --statsAverageScore: #22c55e;
+    --statsAverageSpeed: #3b82f6;
+    --statsDifficultyScore: #ad1d82;
+    --statsTopicsCovered: #ecca05;
+
+    /* Difficulty colors */
+    --difficultyEasy: #22c55e;
+    --difficultyHard: #f97316;
+    --difficultyDSE: #ef4444;
+
+    /* Toast colors */
+    --toastSuccess: #10b981;
+    --toastError: #ef4444;
+    --toastWarning: #f59e0b;
+    --toastInfo: #ff9c22;
+    --toastShadow: #000;
+    --sliderThumbShadow: #000;
+
+    /* Error input background */
+    --errorInputBackground: #fef2f2;
+
+    /* Input colors */
+    --inputPlaceholder: #9ca3af;
+    --iconInactive: #9ca3af;
+    --inputBorder: #e5e7eb;
+    --inputBackground: #f9fafb;
+    --inputBackgroundFocused: #ffffff;
+
+    /* Practice screen colors */
+    --practiceEmptyTitle: #223344;
+    --practiceEmptySubtitle: #ff9213;
+    --practiceAreaCardBg: #ff9108;
+    --practiceAreaCardText: #ffffff;
+    --practiceAreaCardActiveBg: #ffa73c;
+    --practiceAreaCardActiveText: #ffffff;
+    --practiceAreaBadgeBg: #3b82f6;
+    --practiceAreaBadgeText: #ffffff;
+    --practiceTopicSelectedBg: #e75496;
+    --practiceTopicSelectedBorder: #e75496;
+    --practiceTopicSelectedText: #ffffff;
+    --practiceTopicDefaultBg: #ebf2ff;
+    --practiceTopicDefaultBorder: rgba(255, 156, 34, 0.12);
+    --practiceTopicDefaultText: #223344;
+    --practiceDifficultyDefaultBg: #f4f7f9;
+    --practiceDifficultyDefaultText: #223344;
+    --practiceCountSelectedBg: #3b82f6;
+    --practiceCountSelectedText: #ffffff;
+    --practiceCountDefaultBg: #ffffff;
+    --practiceCountDefaultText: #223344;
+    --practiceStartButtonBg: #ff6522;
+    --practiceStartButtonText: #ffffff;
+    --practiceStartDisabledBg: #9ba1a6;
+    --practiceFabBg: #ffb257;
+    --practiceFabIcon: #ffffff;
+    --practiceSessionCardBg: #ffffff;
+    --practiceSessionTitle: #223344;
+    --practiceSessionSubtitle: #9ba1a6;
+    --practiceScoreHigh: #52d87a;
+    --practiceScoreMid: #f97316;
+    --practiceScoreLow: #ef4444;
+    --practiceScoreText: #ffffff;
+    --practiceInProgressBg: #ffb257;
+    --practiceTimerIcon: #ffb257;
+    --practiceTimerText: #223344;
+    --practiceNavCurrent: #ffb257;
+    --practiceNavAnswered: #ffb43d;
+    --practiceNavDefault: #ffffff;
+    --practiceNavDefaultBorder: rgba(255, 156, 34, 0.12);
+    --practiceNavCurrentText: #ffffff;
+    --practiceNavAnsweredText: #ffffff;
+    --practiceNavDefaultText: #223344;
+    --practiceOptionSelectedBg: #ffb257;
+    --practiceOptionSelectedText: #ffffff;
+    --practiceOptionDefaultBg: #ffffff;
+    --practiceOptionDefaultText: #223344;
+    --practiceOptionDefaultBorder: rgba(255, 156, 34, 0.12);
+    --practiceOptionLabelBg: #f5f1ed;
+    --practiceOptionLabelSelectedBg: #ff6b00;
+    --practiceSubmitBg: #ffb257;
+    --practiceSubmitText: #ffffff;
+    --practiceHintBg: #fff3e0;
+    --practiceHintText: #ff9c22;
+    --practiceHintCardBg: #fff8f0;
+    --practiceReviewCorrectBg: #28c76f;
+    --practiceReviewWrongBg: #ef4444;
+    --practiceReviewIconColor: #ffffff;
+    --practiceReviewCorrectOptionBg: #28c76f;
+    --practiceReviewWrongOptionBg: #ef4444;
+    --practiceReviewNeutralOptionBg: #f5f1ed;
+    --practiceReviewOptionText: #ffffff;
+    --practiceReviewNeutralText: #223344;
+    --practiceBackButtonBg: #ffb257;
+    --practiceBackButtonText: #ffffff;
+
+    /* Daily exercise review colors */
+    --dailyExerciseReviewCorrectBg: #28c76f;
+    --dailyExerciseReviewWrongBg: #ef4444;
+    --dailyExerciseReviewIconColor: #ffffff;
+    --dailyExerciseReviewCorrectOptionBg: #28c76f;
+    --dailyExerciseReviewWrongOptionBg: #ef4444;
+    --dailyExerciseReviewOptionText: #ffffff;
+
+    /* Success colors */
+    --successGreen: #10b981;
+    --successGreenLight: #34d399;
+
+    /* Achievement badge colors */
+    --achievementColorBlue: #3b82f6;
+    --achievementColorGreen: #22c55e;
+
+    /* Shop item colors */
+    --shopItemPurple: #7c4dff;
+    --shopItemOrange: #ff6f00;
+
+    /* Rank leaderboard medal colors */
+    --rankMedalGold: #ffd700;
+    --rankMedalSilver: #c0c0c0;
+    --rankMedalBronze: #cd7f32;
+
+    /* Home header buff button colors */
+    --buffXpBg: #ecfdf5;
+    --buffXpBgPressed: #ddfce7;
+    --buffXpBorder: #34d399;
+    --buffCoinBg: #fffbeb;
+    --buffCoinBgPressed: #fff3cd;
+    --buffCoinBorder: #ffb300;
+    --buffTooltipMutedText: #d1d5db;
+
+    /* SVG / ring colors */
+    --svgRingTrack: #e0e0e0;
+    --coinSvgDark: #ffb300;
+    --coinSvgLight: #ffd54f;
+
+    /* Battle lobby colors */
+    --battleGold: #ffb800;
+    --battleGoldDark: #e5a200;
+    --battleOrange: #ff6f00;
+    --battleDraw: #f59e0b;
+    --battleConfirmGreen: #10b981;
+    --battleConfirmGreenDark: #059669;
+    --battleEventOrangeDark: #ea580c;
+    --battleEventGradientStart: #fff7ed;
+    --battleEventGradientEnd: #fffbeb;
+
+    /* Battle result quiz review colors */
+    --battleResultCorrectBg: #28c76f;
+    --battleResultWrongBg: #ef4444;
+    --battleResultIconColor: #ffffff;
+    --battleResultCorrectOptionBg: #28c76f;
+    --battleResultWrongOptionBg: #ef4444;
+    --battleResultOptionText: #ffffff;
+
+    /* Math background symbol default */
+    --mathBgSymbol: #eef0ff;
+  }
+}

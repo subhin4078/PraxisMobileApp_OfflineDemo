@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Praxis",
+    "slug": "Praxis",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon/icon.png",
+    "scheme": "praxis",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/icon/adaptive-icon.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.mathnotesai.Praxis"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/icon/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/icon/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      "expo-secure-store",
+      "expo-audio",
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "9aef4dcd-2e6e-421b-bd22-dfd980b2bba3"
+      }
+    }
+  }
+}
